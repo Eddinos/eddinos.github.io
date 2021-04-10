@@ -170,7 +170,7 @@ function setControls (camera, domElement, deviceOrientationMode) {
 
 (function init () {
   const {scene, camera, renderer} = createScene()
-  const { controls } = setControls(camera, renderer.domElement, false)
+  const { controls } = setControls(camera, renderer.domElement, true)
   const { vertices, trianglesIndexes} = useCoordinates()
   const { geo, material, heartMesh } = createHeartMesh(vertices, trianglesIndexes)
   scene.add(heartMesh)
