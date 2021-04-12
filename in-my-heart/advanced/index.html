@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta  charset="utf-8">
+		<title>in my heart</title>
+		<style>
+			body {
+				margin: 0;
+			}
+            .controlsOverlay {
+				position: absolute;
+				height: 100vh;
+				width: 100vw;
+				background-color: rgba(220, 220, 220, .8);
+				display: flex;
+				justify-content: space-around;
+			}
+			.controlsOverlay::after {
+				position: absolute;
+				left: 50%;
+				height: 100%;
+				border-left: 4px dashed black;
+				display: block;
+				content: '';
+			}
+			.controlsOverlay img {
+				width: 40vw;
+			}
+		</style>
+	</head>
+	<body>
+        <div class="controlsOverlay">
+			<img class="controlsOverlay__orbit" src="./img/mouse-outline.svg" alt="use mouse controls">
+			<img class="controlsOverlay__rotation" src="./img/180-degree-rotate.svg" alt="use device rotation controls">
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+		<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+		<script src="../DeviceOrientationControls.js"></script>
+		<script src="./heart-advanced.js"></script>
+	</body>
+</html>
